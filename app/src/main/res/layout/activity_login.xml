@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <!--Warning-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/warning"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_warning"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/warning" />
+
+        <TextView
+            android:id="@+id/verifikasiEmailPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email atau password salah"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/popmed" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/vec_ellips"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/vec_circle"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/popbold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:text="Login"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="25dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popmed"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Email"/>
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edit_text"
+                android:hint="Masukkan Alamat Email"
+                android:textSize="14sp"
+                android:fontFamily="@font/popregular"
+                android:paddingStart="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popmed"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Password"
+                android:layout_marginTop="15dp"/>
+            
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:passwordToggleEnabled="true"
+                app:hintEnabled="false"
+                android:background="@drawable/rounded_edit_text"
+                android:layout_marginTop="10dp">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="Masukkan Password"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/popregular"
+                    android:inputType="textPassword"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="20dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:fontFamily="@font/popbold"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:translationZ="4dp"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/vec_ellips"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="-10dp"
+            android:src="@drawable/vec_circle1"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
