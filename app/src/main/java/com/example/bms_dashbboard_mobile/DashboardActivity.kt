@@ -8,10 +8,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainerView
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation
+import com.nafis.bottomnavigation.NafisBottomNavigation
 
 class DashboardActivity : AppCompatActivity() {
-    private lateinit var bottomNavigation : MeowBottomNavigation
+    private lateinit var bottomNavigation : NafisBottomNavigation
     private lateinit var fragment: FragmentContainerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,9 +21,9 @@ class DashboardActivity : AppCompatActivity() {
         bottomNavigation = findViewById(R.id.bottom_navigation)
         fragment = findViewById(R.id.fragment_container)
 
-        bottomNavigation.add(MeowBottomNavigation.Model(1, R.drawable.ic_home))
-        bottomNavigation.add(MeowBottomNavigation.Model(2, R.drawable.ic_add))
-        bottomNavigation.add(MeowBottomNavigation.Model(3, R.drawable.ic_setting))
+        bottomNavigation.add(NafisBottomNavigation.Model(1, R.drawable.ic_home))
+        bottomNavigation.add(NafisBottomNavigation.Model(2, R.drawable.ic_add))
+        bottomNavigation.add(NafisBottomNavigation.Model(3, R.drawable.ic_setting))
 
 
 

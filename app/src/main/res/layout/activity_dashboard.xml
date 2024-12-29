@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".DashboardActivity">
 
-    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+    <com.nafis.bottomnavigation.NafisBottomNavigation
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

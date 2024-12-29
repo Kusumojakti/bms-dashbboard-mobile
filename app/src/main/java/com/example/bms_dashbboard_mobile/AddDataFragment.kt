@@ -22,6 +22,7 @@ import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.example.bms_dashbboard_mobile.DashboardActivity
 import com.example.bms_dashbboard_mobile.R
+import com.example.bms_dashbboard_mobile.api.ApiConstants
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
@@ -63,7 +64,6 @@ class AddDataFragment : Fragment() {
         mapView = view.findViewById(R.id.mapView)
         edt_lat = view.findViewById(R.id.edt_lat)
         edt_long = view.findViewById(R.id.edt_long)
-        edt_id = view.findViewById(R.id.edt_addidews)
         edt_nama = view.findViewById(R.id.edtnama)
         edt_alamat = view.findViewById(R.id.edt_alamatews)
         btn_find = view.findViewById(R.id.btn_get_current_location)
@@ -221,20 +221,17 @@ class AddDataFragment : Fragment() {
     }
 
     private fun registerews() {
-        val id = edt_id.text.toString().trim()
         val nama = edt_nama.text.toString().trim()
         val alamat = edt_alamat.text.toString().trim()
         val lat = edt_lat.text.toString().trim()
         val long = edt_long.text.toString().trim()
 
-        // Cek apakah lat dan long dapat dikonversi ke tipe data double
         val latDouble: Double? = lat.toDoubleOrNull()
         val longDouble: Double? = long.toDoubleOrNull()
 
         //POST API
         val jsonObject = JSONObject()
         try {
-            jsonObject.put("id", id)
             jsonObject.put("nama_ews", nama)
             jsonObject.put("alamat", alamat)
             jsonObject.put("lat", latDouble)
@@ -244,7 +241,7 @@ class AddDataFragment : Fragment() {
             e.printStackTrace()
         }
 
-        AndroidNetworking.post("https://4504-180-242-105-22.ngrok-free.app/api/ews/create")
+        AndroidNetworking.post(ApiConstants.EWS_CREATE)
             .addJSONObjectBody(jsonObject)
             .addHeaders("Content-Type", "application/json")
             .setPriority(Priority.MEDIUM)

@@ -16,6 +16,7 @@ import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.example.bms_dashbboard_mobile.adapter.adapterDataEws
+import com.example.bms_dashbboard_mobile.api.ApiConstants
 import com.example.bms_dashbboard_mobile.databinding.FragmentOverviewBinding
 import com.example.bms_dashbboard_mobile.dataclass.dataEws
 import org.json.JSONArray
@@ -49,7 +50,7 @@ class OverviewFragment : Fragment() {
 
     private fun getData() {
 
-        AndroidNetworking.get("https://4504-180-242-105-22.ngrok-free.app/api/ews/")
+        AndroidNetworking.get(ApiConstants.EWS_DETAILS)
             .setPriority(Priority.LOW)
             .build()
             .getAsJSONObject(object : JSONObjectRequestListener {
@@ -61,6 +62,7 @@ class OverviewFragment : Fragment() {
                             val item = res.getJSONObject(i)
                             dataewslist.add(
                                 dataEws(
+                                    item.getString("id"),
                                     item.getString("nama_ews"),
                                     item.getString("alamat")
                                 )

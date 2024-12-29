@@ -78,8 +78,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
 //    meow bottom navbar
-    implementation ("com.etebarian:meow-bottom-navigation:1.2.0")
-    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
+//    implementation ("com.etebarian:meow-bottom-navigation:1.3.1")
+    implementation ("com.github.Foysalofficial:NafisBottomNav:5.0")
 
     // Swipe Refresh Layout
     implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
@@ -94,11 +94,16 @@ dependencies {
     implementation ("org.osmdroid:osmdroid-android:6.1.18")
 
     //API FAN
-    implementation ("com.amitshekhar.android:android-networking:1.0.2")
+    implementation("com.github.amitshekhariitbhu.Fast-Android-Networking:android-networking:1.0.4")
 
     //    chart
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
 //    circular progress bar
     implementation ("com.mikhaellopez:circularprogressbar:3.1.0")
+
+//    new chart
+    implementation ("com.diogobernardino:williamchart:3.11.0")
+    implementation ("com.diogobernardino.williamchart:tooltip-slider:3.11.0")
+    implementation ("com.diogobernardino.williamchart:tooltip-points:3.11.0")
 }

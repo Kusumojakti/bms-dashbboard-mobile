@@ -15,6 +15,7 @@ import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
+import com.example.bms_dashbboard_mobile.api.ApiConstants
 import com.example.bms_dashbboard_mobile.databinding.ActivityLoginBinding
 import org.json.JSONException
 import org.json.JSONObject
@@ -44,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
             e.printStackTrace()
         }
 
-        AndroidNetworking.post("https://4504-180-242-105-22.ngrok-free.app/api/auth/login")
+        AndroidNetworking.post(ApiConstants.LOGIN)
             .addJSONObjectBody(jsonObject)
             .addHeaders("Content-Type", "application/json")
             .setPriority(Priority.MEDIUM)

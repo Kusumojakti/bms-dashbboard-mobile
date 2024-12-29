@@ -23,12 +23,14 @@ class adapterDataEws (private val context: Context, private val detailewsList : 
 
         val getnamaews = currentItem.nama_ews
         val getalamat = currentItem.alamat
+        val id = currentItem.id
 
         holder.nama.text = currentItem.nama_ews
         holder.alamat.text = currentItem.alamat
 
         holder.card.setOnClickListener {
             val intent = Intent(context, DetailEWS::class.java)
+            intent.putExtra("id", id)
             intent.putExtra("nama_ews", getnamaews)
             intent.putExtra("alamat", getalamat)
             context.startActivity(intent)
